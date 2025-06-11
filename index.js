@@ -20,7 +20,7 @@ app.get("/:dashboardId", (req, res) => {
   };
 
   const token = jwt.sign(payload, METABASE_SECRET_KEY);
-  const iframeUrl = `${METABASE_SITE_URL}/embed/dashboard/${token}#bordered=true&titled=true`;
+  const iframeUrl = `${METABASE_SITE_URL}/embed/dashboard/${token}#theme=night&bordered=true&titled=true`;
 
   res.send(`
     <html>
